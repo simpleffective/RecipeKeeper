@@ -1,0 +1,44 @@
+.record {
+  border-top: 1px solid #213547;
+  border-bottom: 1px solid #213547;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 8px 14px;
+  gap: 4px;
+}
+
+.user-identifier {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.comment {
+  margin: 10px 14px;
+  font-family: cursive;
+  font-size: 1.2rem;
+}
+
+.images-bar {
+  display: flex;
+  margin-left: 10px;
+  gap: 6px;
+}
+
+.image {
+  width: 26%;
+  min-width: 100px;
+  border: 1px solid rgb(87, 67, 87);
+}
+
+.date {
+  margin: 0;
+  font-size: 12px;
+}
+.footer {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+}

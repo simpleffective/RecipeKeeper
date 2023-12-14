@@ -1,0 +1,33 @@
+.control {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+div.reply-control > .user-image {
+  scale: 0.86;
+}
+
+.reply {
+  background-color: rgb(27, 25, 50);
+  margin: 0;
+  padding: 8px 18px;
+  width: fit-content;
+  border-radius: 1.625rem;
+}
+
+.text,
+.replier {
+  margin: 0;
+}
+
+.text {
+  font-family: cursive;
+  font-style: italic;
+}
+
+.replier {
+  color: rgb(245, 245, 174);
+  font-weight: bold;
+  font-size: 0.9rem;
+}

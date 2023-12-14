@@ -1,0 +1,58 @@
+input[name="name"] {
+  font-size: 2rem;
+  font-weight: bold;
+}
+input:not([name="name"]) {
+  font-size: 1rem;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: None;
+  color: rgba(210, 210, 210);
+}
+
+textarea {
+  font-family: cursive;
+  resize: none;
+  font-size: 22px;
+}
+
+.lines {
+  padding: 35px 20px;
+  background: repeating-linear-gradient(
+    rgb(22, 20, 40),
+    rgb(22, 20, 40) 31px,
+    #94acd4 31px,
+    #94acd4 32px
+  );
+  line-height: 32px;
+  font-size: 28px;
+}
+
+input[name="name"]:focus {
+  border-bottom: 1px solid #94acd4;
+}
+
+input:disabled {
+  opacity: 0.5;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgba(210, 210, 210);
+}
+
+.control-error p {
+  font-size: 12px;
+  color: turquoise;
+}
+
+p.hint {
+  font-size: 0.8em;
+  border: 1px solid rgb(17, 40, 94);
+  border-radius: 8px;
+  padding: 12px;
+}

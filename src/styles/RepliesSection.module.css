@@ -1,0 +1,30 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 4px;
+}
+
+.control-bar {
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  color: rgb(182, 182, 182);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.reply-button:hover {
+  text-decoration: underline;
+}
+
+.replies {
+  margin-left: 24px;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
