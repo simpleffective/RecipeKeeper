@@ -1,6 +1,113 @@
 .recipe {
-  width: 50vw;
+  width: 66%;
+  min-width: 500px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageWrap {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin: auto;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-top: 1px solid #613547;
+  border-bottom: 1px solid #613547;
+  margin: 40px 0 0 0;
+}
+
+.info {
+  margin: 6px 0;
+}
+
+.cooked {
+  text-transform: capitalize;
 }
 
 .description {
+  margin: 18px 0;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 22px;
+}
+
+.body {
+  display: flex;
+  border-bottom: 3px solid #213547;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.body > div {
+  flex: 0 1 100%;
+}
+
+.body > div {
+  &:first-child,
+  &:last-child {
+    margin-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.body h3 {
+  font-size: 28px;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.ingredients > li,
+ol.directions > li {
+  padding: 20px;
+  border-bottom: 1px solid #213547;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+ul.ingredients > li {
+  &::before {
+    margin-right: 10px;
+    content: "\25cb";
+  }
+  &:hover {
+    &::before {
+      content: "\25cf";
+    }
+  }
+}
+
+ol.directions > li {
+  counter-increment: cntr_directions;
+}
+
+ol.directions > li::before {
+  content: counter(cntr_directions);
+  float: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  margin: -8px 14px 0 7px;
 }

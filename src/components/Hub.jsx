@@ -24,6 +24,20 @@ export default function Hub({ recipe }) {
         { id: "reply1", user: dummy_user, text: "Looks great!" },
       ],
     },
+    {
+      id: "record1",
+      user: dummy_user,
+      comment: "Came out prefect!",
+      images: [
+        { id: "image0", img: recordImg1 },
+        { id: "image1", img: recordImg2 },
+        { id: "image2", img: recordImg2 },
+      ],
+      replies: [
+        { id: "reply0", user: dummy_user, text: "Nice" },
+        { id: "reply1", user: dummy_user, text: "Looks great!" },
+      ],
+    },
   ]);
 
   function handleAddReply(record, reply) {
@@ -36,7 +50,7 @@ export default function Hub({ recipe }) {
   }
 
   return (
-    <section className="hub">
+    <section id="hub" className="hub">
       {records.map((record) => (
         <Record
           key={record.id}
