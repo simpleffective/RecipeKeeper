@@ -1,5 +1,6 @@
 import { createContext } from "react";
 
 export const RecipesContext = createContext({
-    recipes: []
+  recipes: [],
+  onAdd() {},
 });

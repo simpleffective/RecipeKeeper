@@ -13,7 +13,7 @@ function App() {
       name: "Chicken Lo Mein",
       description: "best chicken lo mein in town",
       ingredients: ["chicken", "lo", "mein"],
-      steps: [
+      directions: [
         "prepare the lo",
         "stir the mein",
         "cook the chicken",
@@ -25,56 +25,56 @@ function App() {
       name: "Majadra",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe2",
       name: "Goulash",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe3",
       name: "Yprah",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe4",
       name: "Prasa",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe5",
       name: "Borsht",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe6",
       name: "Biscuit Cake",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe7",
       name: "Aba's Sufganiot",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
     {
       id: "recipe8",
       name: "Ima's Levivot",
       description: "",
       ingredients: [],
-      steps: [],
+      directions: [],
     },
   ]);
 
@@ -88,12 +88,12 @@ function App() {
     { path: "/recipes/:id", element: <Recipe /> },
     {
       path: "/recipes/new",
-      element: <NewRecipe onAdd={handleAdd} />,
+      element: <NewRecipe />,
     },
   ]);
 
   return (
-    <RecipesContext.Provider value={{ recipes: recipes }}>
+    <RecipesContext.Provider value={{ recipes: recipes, onAdd: handleAdd }}>
       <RouterProvider router={router} />
     </RecipesContext.Provider>
   );

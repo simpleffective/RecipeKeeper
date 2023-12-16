@@ -1,6 +1,9 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
-const Input = forwardRef(function Input({ label, id, error, ...props }, ref) {
+const Input = forwardRef(function Input(
+  { className, label, id, error, ...props },
+  ref
+) {
   const inputRef = useRef();
   useImperativeHandle(ref, () => {
     return {
@@ -16,11 +19,11 @@ const Input = forwardRef(function Input({ label, id, error, ...props }, ref) {
     };
   });
   return (
-    <div>
-      {label && <label htmlFor={id}>label</label>}
-      <input id={id} {...props} ref={inputRef} />
+    <>
+      {label && <label htmlFor={id}>{label}</label>}
+      <input className={className} id={id} {...props} ref={inputRef} />
       <div className="control-error">{error && <p>{error}</p>}</div>
-    </div>
+    </>
   );
 });
 

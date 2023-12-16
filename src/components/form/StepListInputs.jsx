@@ -1,7 +1,16 @@
 import { useState } from "react";
 
-export default function StepListInputs({ array, setArray, name, placeholder }) {
+export default function StepListInputs({
+  array,
+  setArray,
+  name,
+  placeholder,
+  maxLength,
+  rows,
+  cols,
+}) {
   const [dummyVisible, setDummyVisible] = useState(false);
+
   return (
     <>
       {array.map((value, i) => {
@@ -16,22 +25,36 @@ export default function StepListInputs({ array, setArray, name, placeholder }) {
         }
         return (
           <li key={i}>
-            <input
+            <textarea
               name={name}
               placeholder={placeholder}
               value={value}
+              maxLength={maxLength}
+              rows={rows}
+              cols={cols}
               onChange={(event) =>
-                setArray((array) => array.toSpliced(i, 1, event.target.value))
+                setArray(array.toSpliced(i, 1, event.target.value))
               }
               onFocus={handleFocus}
               onBlur={handleBlur}
+              onInput={(event) => {
+                event.target.style.height = "5px";
+                event.target.style.height = event.target.scrollHeight + "px";
+              }}
             />
           </li>
         );
       })}
       {dummyVisible && (
         <li>
-          <input name={name} placeholder={placeholder} disabled />
+          <textarea
+            maxLength={maxLength}
+            rows={rows}
+            cols={cols}
+            name={name}
+            placeholder={placeholder}
+            disabled
+          />
         </li>
       )}
     </>

@@ -1,10 +1,9 @@
 import styles from "../styles/Recipe.module.css";
 
-export default function RecipeBody({ ingredients, steps }) {
+export default function RecipeBody({ ingredients, directions }) {
   return (
     <div className={styles.body}>
       <div>
-        {" "}
         <h3>Ingredients:</h3>
         <ul className={styles.ingredients}>
           {ingredients.map((ingredient, i) => (
@@ -15,11 +14,10 @@ export default function RecipeBody({ ingredients, steps }) {
         </ul>
       </div>
       <div>
-        {" "}
         <h3>Directions:</h3>
         <ol className={styles.directions}>
-          {steps.map((step, i) => (
-            <li key={i}>{step}</li>
+          {directions.map((directions, i) => (
+            <li key={i}>{directions}</li>
           ))}
         </ol>
       </div>
